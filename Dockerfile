@@ -11,7 +11,7 @@ COPY conf/smb.conf /etc/samba/smb.conf
 
 ENV USERNAME=samba PASSWORD=samba WORKGROUP=WORKGROUP PUBLIC=no PRINTERS=no PRINT=no
 
-EXPOSE 137 138 139 445
+EXPOSE 139 445
 
 ENTRYPOINT ["./entrypoint.sh"]
 CMD ["/usr/sbin/smbd", "-FS"]
